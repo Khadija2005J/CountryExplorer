@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Rechercher un pays..."
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:inputType="text"
+        android:autofillHints="countryName"
+        android:padding="12dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btnAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tous" style="?attr/materialButtonOutlinedStyle" />
+            <Button android:id="@+id/btnAfrica" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Afrique" style="?attr/materialButtonOutlinedStyle" />
+            <Button android:id="@+id/btnEurope" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Europe" style="?attr/materialButtonOutlinedStyle" />
+            <Button android:id="@+id/btnAmericas" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Amériques" style="?attr/materialButtonOutlinedStyle" />
+            <Button android:id="@+id/btnAsia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Asie" style="?attr/materialButtonOutlinedStyle" />
+            <Button android:id="@+id/btnOceania" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Océanie" style="?attr/materialButtonOutlinedStyle" />
+            <Button android:id="@+id/btnFavorites" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Favoris" style="?attr/materialButtonOutlinedStyle" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
